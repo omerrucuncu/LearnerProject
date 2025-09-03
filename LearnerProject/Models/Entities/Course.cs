@@ -12,7 +12,10 @@ namespace LearnerProject.Models.Entities
         public string ImageUrl { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
-        public Category Category { get; set; }
+        public int CategoryId { get; set; }
+        public virtual Category Category { get; set; }
+        public int ClubId { get; set; }
+        public virtual Club Club { get; set; }
 
     }
 }

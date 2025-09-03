@@ -11,6 +11,8 @@ namespace LearnerProject.Models.Entities
         public string CategoryName { get; set; }
         public string Icon { get; set; }
         public bool Status { get; set; }
+        // Course ve Category tablosu arasında bire çok ilişki kur
+        public List<Course> Courses { get; set; }
 
 
 
