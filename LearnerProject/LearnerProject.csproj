@@ -135,6 +135,14 @@
     <Compile Include="Migrations\202509031626573_initial.Designer.cs">
       <DependentUpon>202509031626573_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202509031724256_initial2.cs" />
+    <Compile Include="Migrations\202509031724256_initial2.Designer.cs">
+      <DependentUpon>202509031724256_initial2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202509031729540_initial1.cs" />
+    <Compile Include="Migrations\202509031729540_initial1.Designer.cs">
+      <DependentUpon>202509031729540_initial1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context\LearnerContext.cs" />
     <Compile Include="Models\Entities\About.cs" />
@@ -240,6 +248,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202509031626573_initial.resx">
       <DependentUpon>202509031626573_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202509031724256_initial2.resx">
+      <DependentUpon>202509031724256_initial2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202509031729540_initial1.resx">
+      <DependentUpon>202509031729540_initial1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
