@@ -14,5 +14,6 @@ namespace LearnerProject.Models.Entities
         public string MessageContent { get; set; }
 
         public bool IsRead { get; set; }
+        
     }
 }

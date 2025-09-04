@@ -14,5 +14,6 @@ namespace LearnerProject.Models.Entities
         public string Comment { get; set; }
         public int StudentId { get; set; }
         public virtual Student Student { get; set; }
+        public bool Status { get; set; }
     }
 }

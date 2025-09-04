@@ -12,5 +12,6 @@ namespace LearnerProject.Models.Entities
         public string OpenHours { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
+        public bool Status { get; set; }
     }
 }

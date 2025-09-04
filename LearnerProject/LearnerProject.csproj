@@ -150,6 +150,10 @@
     <Compile Include="Migrations\202509041048534_mig_remove_relation_classroom_and_course.Designer.cs">
       <DependentUpon>202509041048534_mig_remove_relation_classroom_and_course.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202509041801077_status_properties_added.cs" />
+    <Compile Include="Migrations\202509041801077_status_properties_added.Designer.cs">
+      <DependentUpon>202509041801077_status_properties_added.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context\LearnerContext.cs" />
     <Compile Include="Models\Entities\About.cs" />
@@ -540,6 +544,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202509041048534_mig_remove_relation_classroom_and_course.resx">
       <DependentUpon>202509041048534_mig_remove_relation_classroom_and_course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202509041801077_status_properties_added.resx">
+      <DependentUpon>202509041801077_status_properties_added.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

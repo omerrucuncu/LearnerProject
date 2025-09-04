@@ -13,6 +13,7 @@ namespace LearnerProject.Models.Entities
         public string Password { get; set; }
         public List<Review> Reviews { get; set; }
         public List<CourseRegister> CourseRegisters { get; set; }
+        public bool Status { get; set; }
 
 
     }

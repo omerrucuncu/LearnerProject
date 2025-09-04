@@ -12,5 +12,6 @@ namespace LearnerProject.Models.Entities
         public virtual Student Student { get; set; }
         public int CourseId { get; set; }
         public virtual Course Course { get; set; }
+        public bool Status { get; set; }
     }
 }
