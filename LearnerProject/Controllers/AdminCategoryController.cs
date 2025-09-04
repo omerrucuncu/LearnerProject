@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace LearnerProject.Controllers
 {
-    public class CategoryController : Controller
+    public class AdminCategoryController : Controller
     {
         LearnerContext context = new LearnerContext();
         // GET: Category
@@ -19,16 +19,16 @@ namespace LearnerProject.Controllers
             return View(categories);
         }
 
-        public ActionResult DeleteCategory(int id) // category delete operation has been completed
-        {
-            var category = context.Categories.Find(id);
-            if (category != null)
-            {
-                category.Status = false; // Soft delete by setting status to false
-                context.SaveChanges();
-            }
-            return RedirectToAction("Index");
-        }
+        //public ActionResult DeleteCategory(int id) // category delete operation has been completed
+        //{
+        //    var category = context.Categories.Find(id);
+        //    if (category != null)
+        //    {
+        //        category.Status = false; // Soft delete by setting status to false
+        //        context.SaveChanges();
+        //    }
+        //    return RedirectToAction("Index");
+        //}
 
         [HttpGet]
         public ActionResult AddCategory() // category listing operation has been completed

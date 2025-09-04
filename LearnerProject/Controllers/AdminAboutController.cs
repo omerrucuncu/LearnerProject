@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace LearnerProject.Controllers
 {
-    public class AboutController : Controller
+    public class AdminAboutController : Controller
     {
         LearnerContext context = new LearnerContext();
         // GET: About
@@ -17,7 +17,7 @@ namespace LearnerProject.Controllers
         {
             var abouts = context.Abouts.ToList();
             return View(abouts);
-        }
+        } 
 
         public ActionResult MakeActive(int id)
         {
