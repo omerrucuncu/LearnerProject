@@ -38,6 +38,7 @@ namespace LearnerProject.Controllers
         [HttpPost]
         public ActionResult AddCategory(Category category)  // category add operation has been completed
         {
+            category.Status = true; // New categories are active by default
             context.Categories.Add(category);
             context.SaveChanges();
             return RedirectToAction("Index");
@@ -50,43 +51,43 @@ namespace LearnerProject.Controllers
             {
                 return HttpNotFound();
             }
-            return View(category);
+            return View(category); // existing category data is sent to the view
         }
         [HttpPost]
         public ActionResult UpdateCategory(Category category) // category update operation has been completed
         {
-            var existingCategory = context.Categories.Find(category.CategoryId);
+            var existingCategory = context.Categories.Find(category.CategoryId); // existing category is fetched from the database
             if (existingCategory == null)
             {
-                return HttpNotFound();
+                return HttpNotFound(); // if not found, return 404
             }
-            existingCategory.CategoryName = category.CategoryName;
-            existingCategory.Icon = category.Icon;
-            existingCategory.Status = true; 
-            context.SaveChanges();
-            return RedirectToAction("Index");
+            existingCategory.CategoryName = category.CategoryName; // update the fields
+            existingCategory.Icon = category.Icon; // update the fields
+            existingCategory.Status = true; // ensure the category remains active after update
+            context.SaveChanges(); // save changes to the database
+            return RedirectToAction("Index"); // redirect to the category list
         }
 
         public ActionResult MakeActive(int id) // category make active operation has been completed
         {
-            var category = context.Categories.Find(id);
+            var category = context.Categories.Find(id); // find the category by id
             if (category != null)
             {
                 category.Status = true; // Set status to true to make it active
-                context.SaveChanges();
+                context.SaveChanges(); // save changes to the database
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Index"); // redirect to the category list
         }
 
         public ActionResult MakeInactive(int id) // category make inactive operation has been completed
         {
-            var category = context.Categories.Find(id);
+            var category = context.Categories.Find(id); // find the category by id
             if (category != null)
             {
                 category.Status = false; // Set status to false to make it inactive
-                context.SaveChanges();
+                context.SaveChanges(); // save changes to the database
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Index"); // redirect to the category list
         }
     }
 }

@@ -1,0 +1,30 @@
+﻿@model LearnerProject.Models.Entities.About
+@{
+    ViewBag.Title = "AddAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<br />
+<h3>Add About</h3>
+<br />
+
+<form method="post">
+    <label>Title</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Description</label>
+    @Html.TextAreaFor(x => x.Description, new { @class = "form-control", rows = 4 })
+    <br />
+    <label>Image Url</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    <label>Item-1</label>
+    @Html.TextBoxFor(x => x.Item1, new { @class = "form-control" })
+    <br />
+    <label>Item-2</label>
+    @Html.TextBoxFor(x => x.Item2, new { @class = "form-control" })
+    <br />
+    <label>Item-3</label>
+    @Html.TextBoxFor(x => x.Item3, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-primary">Save</button>
+</form>

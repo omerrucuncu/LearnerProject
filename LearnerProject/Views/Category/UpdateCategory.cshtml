@@ -1,15 +1,16 @@
 ﻿@model LearnerProject.Models.Entities.Category
 @{
-    ViewBag.Title = "AddCategory";
+    ViewBag.Title = "UpdateCategory";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<h3>Add New Category</h3>
+<h3>Update Category</h3>
 
 <form method="post">
+    @Html.HiddenFor(x => x.CategoryId)
     <label>Category Name</label>
     @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
     <br />
-    
-    <button class="btn btn-outline-primary">Save</button>
+
+    <button class="btn btn-outline-primary">Update</button>
 </form>

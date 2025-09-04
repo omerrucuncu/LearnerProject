@@ -4,7 +4,7 @@
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 <br />
-<h3>Kategoriler</h3>
+<h3>Categories</h3>
 <br />
 @{
     int count = 0;
@@ -13,9 +13,9 @@
 
     <tr>
         <th style="text-align : center ; align-content : center ; font-weight : bold">#</th>
-        <th style="text-align : center ; align-content : center ; font-weight : bold">Category Name</th>
+        <th style="text-align : center ; align-content : center ; font-weight : bold">Category Name</th>s
         <th style="text-align : center ; align-content : center ; font-weight : bold">Status</th>
-        <th style="text-align : center ; align-content : center ; font-weight : bold">Transactions</th>
+        <th style="text-align : center ; align-content : center ; font-weight : bold">Operations</th>
         <th style="text-align : center ; align-content : center ; font-weight : bold">Active - Inactive</th>
     </tr>
 
@@ -25,15 +25,19 @@
         <tr>
             <td style="text-align : center ; align-content : center ; font-weight : bold">@count</td>
             <td style="text-align : center ; align-content : center ; font-weight : bold">@item.CategoryName</td>
+            <td style="text-align : center ; align-content : center ; font-weight : bold">@item.Status</td>
             <td style="text-align : center ; align-content : center ; font-weight : bold">
-                <a href="/Category/DeleteCategory/@item.CategoryId" style="text-align : center ; align-content : center ; font-weight : bold"  class="btn btn-outline-danger"><i class="fa fa-trash"></i> Delete</a>
+
+                <a href="/Category/DeleteCategory/@item.CategoryId" style="text-align : center ; align-content : center ; font-weight : bold" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Delete</a>
                 <a href="/Category/UpdateCategory/@item.CategoryId" style="text-align : center ; align-content : center ; font-weight : bold" class="btn btn-outline-info"><i class="fa fa-pen"></i> Update</a>
-                <a href="/Category/MakeActive/@item.CategoryId" style="text-align : center ; align-content : center ; font-weight : bold" ></a>
-                <a href="/Category/MakeInactive/@item.CategoryId" style="text-align : center ; align-content : center ; font-weight : bold"></a>
+            </td>
+            <td style="text-align : center ; align-content : center ; font-weight : bold">
+                <a href="/Category/MakeActive/@item.CategoryId" style="text-align : center ; align-content : center ; font-weight : bold" class="btn btn-outline-success">Make Active</a>
+                <a href="/Category/MakeInactive/@item.CategoryId" style="text-align : center ; align-content : center ; font-weight : bold" class="btn btn-outline-warning">Make Inactive</a>
             </td>
         </tr>
     }
 
 </table>
 <br />
-<a href="/Category/AddCategory" class="btn btn-outline-primary">Yeni Kategori Ekle</a>
+<a href="/Category/AddCategory" class="btn btn-outline-primary">Add New Category</a>

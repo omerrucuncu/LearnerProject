@@ -1,0 +1,51 @@
+﻿@model List<LearnerProject.Models.Entities.About>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<br />
+<h3>About</h3>
+<br />
+@{
+    int count = 0;
+}
+<table class="table table-bordered table-hover">
+    <tr>
+        <th style="text-align : center ; align-content : center ; font-weight : bold">#</th>
+        <th style="text-align : center ; align-content : center ; font-weight : bold">Title</th>
+        <th style="text-align : center ; align-content : center ; font-weight : bold">Description</th>
+        <th style="text-align : center ; align-content : center ; font-weight : bold">Image Url</th>
+        <th style="text-align : center ; align-content : center ; font-weight : bold">Item-1</th>
+        <th style="text-align : center ; align-content : center ; font-weight : bold">Item-2</th>
+        <th style="text-align : center ; align-content : center ; font-weight : bold">Item-3</th>
+        <th style="text-align : center ; align-content : center ; font-weight : bold">Status</th>
+        <th style="text-align : center ; align-content : center ; font-weight : bold">Update</th>
+        <th style="text-align : center ; align-content : center ; font-weight : bold">Active - Inactive</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td style="text-align : center ; align-content : center ; font-weight : bold">@count</td>
+            <td style="text-align : center ; align-content : center ; font-weight : bold">@item.Title</td>
+            <td style="text-align : center ; align-content : center ; font-weight : bold">@item.Description</td>
+            <td style="text-align : center ; align-content : center ; font-weight : bold">@item.ImageUrl</td>
+            <td style="text-align : center ; align-content : center ; font-weight : bold">@item.Item1</td>
+            <td style="text-align : center ; align-content : center ; font-weight : bold">@item.Item2</td>
+            <td style="text-align : center ; align-content : center ; font-weight : bold">@item.Item3</td>
+            <td style="text-align : center ; align-content : center ; font-weight : bold">@item.Status</td>
+            <td style="text-align : center ; align-content : center ; font-weight : bold">
+                <a style="text-align : center ; align-content : center ; font-weight : bold" class="btn btn-outline-info" href="/About/UpdateAbout/@item.AboutId"><i class="fa fa-pen"></i>Update</a>
+            </td>
+            <td style="text-align : center ; align-content : center ; font-weight : bold">
+                <a style="text-align : center ; align-content : center ; font-weight : bold" class="btn btn-outline-success" href="/About/MakeActive/@item.AboutId"><i class="	fas fa-check-square"></i> Make Active</a>
+                <a style="text-align : center ; align-content : center ; font-weight : bold" class="btn btn-outline-warning" href="/About/MakeInactive/@item.AboutId"><i class="fa fa-lock"></i> Make Inactive</a>
+            </td>
+
+        </tr>
+    }
+
+</table>
+<br />
+<a href="/About/AddAbout" class="btn btn-outline-primary"><i class="fas fa-plus-square"></i> Add New About</a>
+
