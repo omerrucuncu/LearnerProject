@@ -132,6 +132,7 @@
     <Compile Include="Controllers\AdminBannerController.cs" />
     <Compile Include="Controllers\AdminClubController.cs" />
     <Compile Include="Controllers\AdminContactController.cs" />
+    <Compile Include="Controllers\AdminFAQController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\AdminCategoryController.cs" />
     <Compile Include="Controllers\AdminCourseController.cs" />
@@ -177,6 +178,10 @@
     <Compile Include="Migrations\202509051228394_mig_relationship_added.cs" />
     <Compile Include="Migrations\202509051228394_mig_relationship_added.Designer.cs">
       <DependentUpon>202509051228394_mig_relationship_added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202509051403167_mig_123.cs" />
+    <Compile Include="Migrations\202509051403167_mig_123.Designer.cs">
+      <DependentUpon>202509051403167_mig_123.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context\LearnerContext.cs" />
@@ -539,6 +544,9 @@
     <Content Include="Views\AdminCourse\Index.cshtml" />
     <Content Include="Views\AdminCourse\AddCourse.cshtml" />
     <Content Include="Views\AdminCourse\UpdateCourse.cshtml" />
+    <Content Include="Views\AdminFAQ\Index.cshtml" />
+    <Content Include="Views\AdminFAQ\AddFAQ.cshtml" />
+    <Content Include="Views\AdminFAQ\UpdateFAQ.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -601,6 +609,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202509051228394_mig_relationship_added.resx">
       <DependentUpon>202509051228394_mig_relationship_added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202509051403167_mig_123.resx">
+      <DependentUpon>202509051403167_mig_123.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
