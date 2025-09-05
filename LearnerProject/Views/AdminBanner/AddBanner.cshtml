@@ -1,0 +1,16 @@
+﻿@model LearnerProject.Models.Entities.Banner
+@{
+    ViewBag.Title = "AddBanner";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<br />
+<h3>Add New Banner</h3>
+<br />
+<form method="post">
+    <label>Title</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    
+
+    <button class="btn btn-outline-primary">Save</button>
+</form>
