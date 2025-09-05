@@ -166,6 +166,18 @@
     <Compile Include="Migrations\202509050920067_mig_added_banner_status.Designer.cs">
       <DependentUpon>202509050920067_mig_added_banner_status.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202509051154516_mig_teacher_and_course_relationship_added.cs" />
+    <Compile Include="Migrations\202509051154516_mig_teacher_and_course_relationship_added.Designer.cs">
+      <DependentUpon>202509051154516_mig_teacher_and_course_relationship_added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202509051227153_mig_random3.cs" />
+    <Compile Include="Migrations\202509051227153_mig_random3.Designer.cs">
+      <DependentUpon>202509051227153_mig_random3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202509051228394_mig_relationship_added.cs" />
+    <Compile Include="Migrations\202509051228394_mig_relationship_added.Designer.cs">
+      <DependentUpon>202509051228394_mig_relationship_added.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context\LearnerContext.cs" />
     <Compile Include="Models\Entities\About.cs" />
@@ -580,6 +592,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202509050920067_mig_added_banner_status.resx">
       <DependentUpon>202509050920067_mig_added_banner_status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202509051154516_mig_teacher_and_course_relationship_added.resx">
+      <DependentUpon>202509051154516_mig_teacher_and_course_relationship_added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202509051227153_mig_random3.resx">
+      <DependentUpon>202509051227153_mig_random3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202509051228394_mig_relationship_added.resx">
+      <DependentUpon>202509051228394_mig_relationship_added.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
