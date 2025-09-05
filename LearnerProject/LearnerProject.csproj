@@ -128,7 +128,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminAboutController.cs" />
+    <Compile Include="Controllers\AdminAdminController.cs" />
     <Compile Include="Controllers\AdminClubController.cs" />
+    <Compile Include="Controllers\AdminContactController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\AdminCategoryController.cs" />
     <Compile Include="Global.asax.cs">
@@ -153,6 +155,10 @@
     <Compile Include="Migrations\202509041801077_status_properties_added.cs" />
     <Compile Include="Migrations\202509041801077_status_properties_added.Designer.cs">
       <DependentUpon>202509041801077_status_properties_added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202509050853030_mig_added_admin_status.cs" />
+    <Compile Include="Migrations\202509050853030_mig_added_admin_status.Designer.cs">
+      <DependentUpon>202509050853030_mig_added_admin_status.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context\LearnerContext.cs" />
@@ -503,9 +509,13 @@
     <Content Include="Views\AdminClub\Index.cshtml" />
     <Content Include="Views\AdminClub\AddClub.cshtml" />
     <Content Include="Views\AdminClub\UpdateClub.cshtml" />
+    <Content Include="Views\AdminContact\Index.cshtml" />
+    <Content Include="Views\AdminContact\AddContact.cshtml" />
+    <Content Include="Views\AdminContact\UpdateContact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\AdminAdmin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -549,6 +559,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202509041801077_status_properties_added.resx">
       <DependentUpon>202509041801077_status_properties_added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202509050853030_mig_added_admin_status.resx">
+      <DependentUpon>202509050853030_mig_added_admin_status.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

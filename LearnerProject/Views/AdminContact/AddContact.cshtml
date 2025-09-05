@@ -1,0 +1,25 @@
+﻿@model LearnerProject.Models.Entities.Contact
+@{
+    ViewBag.Title = "AddContact";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<br />
+<h3>Add New Contact</h3>
+<br />
+<form method="post">
+    <label>Address</label>
+    @Html.TextBoxFor(x => x.Address, new { @class = "form-control" })
+    <br />
+    <label>Icon</label>
+    @Html.TextBoxFor(x => x.OpenHours, new { @class = "form-control" })
+    <br />
+    <label>Email</label>
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    <br />
+    <label>Phone</label>
+    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+    <br />
+    
+
+    <button class="btn btn-outline-primary">Save</button>
+</form>
