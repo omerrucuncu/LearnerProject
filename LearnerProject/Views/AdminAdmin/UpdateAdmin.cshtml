@@ -1,0 +1,25 @@
+﻿@model LearnerProject.Models.Entities.Admin
+@{
+    ViewBag.Title = "UpdateAdmin";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<br />
+<h3>Update Admin</h3>
+<br />
+<form method="post">
+    @Html.HiddenFor(x => x.AdminId)
+    <label>Name Surname</label>
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+    <br />
+    <label>UserName</label>
+    @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
+    <br />
+    <label>Password</label>
+    @Html.PasswordFor(x => x.Password, new { @class = "form-control" })
+    <br />
+    <label>Image URL</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-outline-primary">Update</button>
+</form>
