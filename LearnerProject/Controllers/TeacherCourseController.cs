@@ -21,7 +21,7 @@ namespace LearnerProject.Controllers
         }
 
         [HttpGet]
-        public ActionResult AddCourse() // course add page loading has been completed
+        public ActionResult AddTeacherCourse() // course add page loading has been completed
         {
             // For the course addition page, we might want to provide a list of categories for the teacher to choose from.
             ViewBag.Categories = new SelectList((context.Categories.Where(c => c.Status)).ToList(), "CategoryId", "Name"); // Only active categories are shown // Pass categories to the view for dropdown 
@@ -35,7 +35,7 @@ namespace LearnerProject.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult AddCourse(Course course) // course add operation has been completed
+        public ActionResult AddTeacherCourse(Course course) // course add operation has been completed
         {
             context.Courses.Add(course);
             course.Status = true;
@@ -43,7 +43,7 @@ namespace LearnerProject.Controllers
             return RedirectToAction("Index");
         }
         [HttpGet]
-        public ActionResult UpdateCourse(int id) // course listing operation has been completed
+        public ActionResult UpdateTeacherCourse(int id) // course listing operation has been completed
         {
             var course = context.Courses.Find(id);
             if (course == null)
@@ -53,20 +53,22 @@ namespace LearnerProject.Controllers
             return View(course); // existing course data is sent to the view
         }
         [HttpPost]
-        public ActionResult UpdateCourse(Course course) // course update operation has been completed
+        public ActionResult UpdateTeacherCourse(Course course) // course update operation has been completed
         {
             var existingCourse = context.Courses.Find(course.CourseId);
             if (existingCourse == null)
             {
                 return HttpNotFound();
             }
-            existingCourse.Name = course.Name;
-            existingCourse.Icon = course.Icon;
+            existingCourse.ImageUrl = course.ImageUrl;
+            existingCourse.CourseName = course.CourseName;
             existingCourse.Description = course.Description;
+            existingCourse.Price = course.Price;
+            existingCourse.Category.CategoryId = course.Category.CategoryId;
             context.SaveChanges();
             return RedirectToAction("Index");
         }
-        public ActionResult DeleteCourse(int id) // course delete operation has been completed
+        public ActionResult DeleteTeacherCourse(int id) // course delete operation has been completed
         {
             var course = context.Courses.Find(id);
             if (course != null)
