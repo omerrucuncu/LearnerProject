@@ -26,7 +26,7 @@ namespace LearnerProject.Controllers
             if (ti != null) // If a matching teacher is found
             {
                 FormsAuthentication.SetAuthCookie(ti.UserName, false); // Set the authentication cookie for the teacher 
-                Session["UserName"] = ti.UserName; // Store the username in the session
+                Session["TeacherName"] = ti.NameSurname; // Store the teacher's name in the session
                 return RedirectToAction("Index", "TeacherCourse"); // Redirect to the TeacherCourse controller's Index action
             }
             else
@@ -38,6 +38,7 @@ namespace LearnerProject.Controllers
         
         public ActionResult Logout() // teacher logout operation has been completed
         {
+            FormsAuthentication.SignOut(); // Sign out the user
             Session.Clear(); // Clear the session
             return RedirectToAction("Index"); // Redirect to the login page
         }

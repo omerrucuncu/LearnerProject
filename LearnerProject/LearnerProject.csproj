@@ -136,6 +136,7 @@
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\AdminCategoryController.cs" />
     <Compile Include="Controllers\AdminCourseController.cs" />
+    <Compile Include="Controllers\TeacherCourseController.cs" />
     <Compile Include="Controllers\TeacherLoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -548,11 +549,12 @@
     <Content Include="Views\AdminFAQ\Index.cshtml" />
     <Content Include="Views\AdminFAQ\AddFAQ.cshtml" />
     <Content Include="Views\AdminFAQ\UpdateFAQ.cshtml" />
+    <Content Include="Views\TeacherLogin\Index.cshtml" />
+    <Content Include="Views\TeacherCourse\Index.cshtml" />
+    <Content Include="Views\Course\AddCourse.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Course\" />
-    <Folder Include="Views\TeacherLogin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

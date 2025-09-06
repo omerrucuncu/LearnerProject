@@ -17,7 +17,6 @@ namespace LearnerProject.Controllers
             var clubs = context.Clubs.ToList();
             return View(clubs);
         }
-
         [HttpGet]
         public ActionResult AddClub() // club add page loading has been completed
         {
