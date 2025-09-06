@@ -30,9 +30,8 @@ namespace LearnerProject.Controllers
             var teacher = context.Teachers.FirstOrDefault(t => t.NameSurname == teacherName); // Find the teacher entity based on the name
             ViewBag.TeacherId = teacher?.TeacherId; // Pass the TeacherId to the view /
 
-            
 
-            return View();
+             return View("~/Views/Course/AddTeacherCourse.cshtml");
         }
         [HttpPost]
         public ActionResult AddTeacherCourse(Course course) // course add operation has been completed
