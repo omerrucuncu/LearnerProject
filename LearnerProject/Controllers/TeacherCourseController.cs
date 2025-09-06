@@ -37,10 +37,12 @@ namespace LearnerProject.Controllers
         [HttpPost]
         public ActionResult AddTeacherCourse(Course course) // course add operation has been completed
         {
-            context.Courses.Add(course);
-            course.Status = true;
-            context.SaveChanges();
-            return RedirectToAction("Index");
+            string teacherName = Session["TeacherName"] as string; // Get the teacher's name from the session
+            var teacher = context.Teachers.Where(t => t.NameSurname == teacherName).Select(x => x.TeacherId).FirstOrDefault(); // Find the teacher entity based on the name
+            context.Courses.Add(course); // Add the new course to the database
+            course.Status = true; // New courses are active by default
+            context.SaveChanges(); // Save changes to the database
+            return RedirectToAction("Index"); // Redirect to the course listing page after adding the course
         }
         [HttpGet]
         public ActionResult UpdateTeacherCourse(int id) // course listing operation has been completed

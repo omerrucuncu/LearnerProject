@@ -551,7 +551,7 @@
     <Content Include="Views\AdminFAQ\UpdateFAQ.cshtml" />
     <Content Include="Views\TeacherLogin\Index.cshtml" />
     <Content Include="Views\TeacherCourse\Index.cshtml" />
-    <Content Include="Views\Course\Index.cshtml" />
+    <Content Include="Views\TeacherCourse\AddTeacherCourse.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
