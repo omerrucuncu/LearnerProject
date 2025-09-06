@@ -28,7 +28,7 @@ namespace LearnerProject.Controllers
             // Also, we can set the TeacherId for the new course based on the logged-in teacher
             var teacherName = Session["TeacherName"] as string; // Get the teacher's name from the session
             var teacher = context.Teachers.FirstOrDefault(t => t.NameSurname == teacherName); // Find the teacher entity based on the name
-            ViewBag.TeacherId = teacher?.TeacherId; // Pass the TeacherId to the view
+            ViewBag.TeacherId = teacher?.TeacherId; // Pass the TeacherId to the view /
 
             
 
