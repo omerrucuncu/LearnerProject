@@ -27,7 +27,7 @@ namespace LearnerProject.Controllers
             {
                 FormsAuthentication.SetAuthCookie(ti.UserName, false); // Set the authentication cookie for the teacher 
                 Session["TeacherName"] = ti.NameSurname; // Store the teacher's name in the session
-                return RedirectToAction("Index", "TeacherCourse"); // Redirect to the TeacherCourse controller's Index action
+                return RedirectToAction("Index", "Course"); // Redirect to the Course controller's Index action
             }
             else
             {

@@ -14,7 +14,7 @@ namespace LearnerProject.Controllers
         LearnerContext context = new LearnerContext();
         public ActionResult Index() // teacher course listing operations have been completed
         {
-            var teacherName = Session["TeacherName"] as string; // Get the teacher's name from the session
+            var teacherName = Session["TeacherName"].ToString(); // Get the teacher's name from the session
             var courses = context.Courses.Where(c => c.Teacher.NameSurname == teacherName).ToList(); // Retrieve courses associated with the logged-in teacher
 
             return View(courses); // Pass the list of courses to the view

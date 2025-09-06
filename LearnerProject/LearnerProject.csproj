@@ -551,11 +551,12 @@
     <Content Include="Views\AdminFAQ\AddFAQ.cshtml" />
     <Content Include="Views\AdminFAQ\UpdateFAQ.cshtml" />
     <Content Include="Views\TeacherLogin\Index.cshtml" />
-    <Content Include="Views\TeacherCourse\Index.cshtml" />
     <Content Include="Views\TeacherLayout\Index.cshtml" />
+    <Content Include="Views\Course\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\TeacherCourse\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
