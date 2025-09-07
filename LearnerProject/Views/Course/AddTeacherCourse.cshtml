@@ -1,0 +1,30 @@
+﻿@model LearnerProject.Models.Entities.Course
+@{
+    ViewBag.Title = "AddTeacherCourse";
+    Layout = "~/Views/TeacherLayout/Index.cshtml";
+}
+
+<br />
+<h3>Add New Course</h3>
+<br />
+<form method="post">
+    <label>Course Name</label>
+    @Html.TextBoxFor(x => x.CourseName, new { @class = "form-control" })
+    <br />
+    <label>Image URL</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    <label>Description</label>
+    @Html.TextAreaFor(x => x.Description, 5, 1, new { @class = "form-control" })
+    <br />
+    <label>Price</label>
+    @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+    <br />
+    <label>Category Name</label>
+    @Html.DropDownListFor(x => x.CategoryId, (IEnumerable<SelectListItem>)ViewBag.Categories, "Select Category", new { @class = "form-control" })
+    <br />
+
+
+    <button class="btn btn-outline-primary">Save</button>
+</form>
+
