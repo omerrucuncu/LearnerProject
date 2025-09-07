@@ -13,5 +13,9 @@ namespace LearnerProject.Controllers
         {
             return View();
         }
+        public PartialViewResult AdminLayoutSideBar()
+        {
+            return PartialView();
+        }
     }
 }

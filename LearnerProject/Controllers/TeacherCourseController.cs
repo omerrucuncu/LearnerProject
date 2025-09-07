@@ -70,8 +70,9 @@ namespace LearnerProject.Controllers
             {
                 return HttpNotFound();
             }
-            existingCourse.TeacherId = teacher; // Ensure the course remains associated with the logged-in teacher
+            existingCourse.TeacherId = context.Teachers.Where(t => t.NameSurname == teacherName).Select(x => x.TeacherId).FirstOrDefault(); // Ensure the course remains associated with the logged-in teacher
             existingCourse.ImageUrl = course.ImageUrl; 
+            existingCourse.CategoryId = course.CategoryId;
             existingCourse.CourseName = course.CourseName; 
             existingCourse.Description = course.Description; 
             existingCourse.Price = course.Price; 

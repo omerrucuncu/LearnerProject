@@ -14,8 +14,10 @@ namespace LearnerProject.Controllers
         // GET: AdminAdmin
         public ActionResult Index() // admin listing operations have been completed
         {
-            var admins = context.Admins.ToList();
-            return View(admins);
+            string adminName = Session["AdminName"] as string; // Get the admin's name from the session
+
+            var admin = context.Admins.Where(a => a.NameSurname == adminName).Select(x =>x.AdminId).FirstOrDefault();
+            return View(admin);
         }
 
         [HttpGet]

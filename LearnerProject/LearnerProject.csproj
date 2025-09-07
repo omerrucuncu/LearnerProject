@@ -136,6 +136,7 @@
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\AdminCategoryController.cs" />
     <Compile Include="Controllers\AdminCourseController.cs" />
+    <Compile Include="Controllers\AdminLoginController.cs" />
     <Compile Include="Controllers\TeacherCourseController.cs" />
     <Compile Include="Controllers\TeacherLayoutController.cs" />
     <Compile Include="Controllers\TeacherLoginController.cs" />
@@ -559,6 +560,8 @@
     <Content Include="Views\Course\Index.cshtml" />
     <Content Include="Views\Course\AddTeacherCourse.cshtml" />
     <Content Include="Views\Course\UpdateTeacherCourse.cshtml" />
+    <Content Include="Views\AdminLogin\Index.cshtml" />
+    <Content Include="Views\AdminLayout\AdminLayoutSideBar.cshtml" />
     <!-- <Content Include="Views\TeacherCourse\Index.cshtml" /> -->
   </ItemGroup>
   <ItemGroup>
