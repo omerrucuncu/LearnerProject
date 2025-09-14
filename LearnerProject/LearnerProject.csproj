@@ -138,6 +138,10 @@
     <Compile Include="Controllers\AdminCourseController.cs" />
     <Compile Include="Controllers\AdminLoginController.cs" />
     <Compile Include="Controllers\AdminTeacherController.cs" />
+    <Compile Include="Controllers\StudentLayoutController.cs" />
+    <Compile Include="Controllers\StudentLoginController.cs" />
+    <Compile Include="Controllers\StudentRegisterController.cs" />
+    <Compile Include="Controllers\StudentReviewController.cs" />
     <Compile Include="Controllers\TeacherCourseController.cs" />
     <Compile Include="Controllers\TeacherLayoutController.cs" />
     <Compile Include="Controllers\TeacherLoginController.cs" />
@@ -567,9 +571,13 @@
     <Content Include="Views\AdminTeacher\Index.cshtml" />
     <Content Include="Views\AdminTeacher\AddTeacher.cshtml" />
     <Content Include="Views\AdminTeacher\UpdateTeacher.cshtml" />
+    <Content Include="Views\StudentLayout\Index.cshtml" />
+    <Content Include="Views\StudentLogin\Index.cshtml" />
+    <Content Include="Views\StudentRegister\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\StudentReview\" />
     <Folder Include="Views\TeacherCourse\" />
   </ItemGroup>
   <ItemGroup>
