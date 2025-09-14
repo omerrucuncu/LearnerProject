@@ -1,0 +1,30 @@
+﻿@model LearnerProject.Models.Entities.Teacher
+@{
+    ViewBag.Title = "UpdateTeacher";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<br />
+<h3>Update Teacher</h3>
+<br />
+<form method="post">
+    @Html.HiddenFor(x => x.TeacherId)
+    <label>Teacher's Name Surname</label>
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+    <br />
+    <label>Image URL</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br />
+    <label>Title</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>User Name</label>
+    @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
+    <br />
+    <label>Password</label>
+    @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+    <br />
+
+
+    <button class="btn btn-outline-primary">Update</button>
+</form>
