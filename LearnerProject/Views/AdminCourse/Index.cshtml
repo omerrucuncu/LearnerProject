@@ -30,7 +30,9 @@
         <tr>
             <td style="text-align : center ; align-content : center ; font-weight : bold">@count</td>
             <td style="text-align : center ; align-content : center ; font-weight : bold">@item.CourseName</td>
-            <td style="text-align: center; align-content: center; font-weight: bold">@item.ImageUrl.Take(250)</td>
+            <td style="text-align : center ; align-content : center ; font-weight : bold">
+                @(item.ImageUrl != null && item.ImageUrl.Length > 200 ? item.ImageUrl.Substring(0, 200) : item.ImageUrl)
+            </td>
             <td style="text-align : center ; align-content : center ; font-weight : bold">@item.Description</td>
             <td style="text-align : center ; align-content : center ; font-weight : bold">@item.Price</td>
             <td style="text-align : center ; align-content : center ; font-weight : bold">@item.Category.CategoryName</td>

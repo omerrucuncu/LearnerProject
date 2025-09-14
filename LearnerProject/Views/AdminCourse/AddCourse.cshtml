@@ -20,7 +20,10 @@
     @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
     <br />
     <label>Category Name</label>
-    @Html.DropDownListFor(x => x.CategoryId, (IEnumerable<SelectListItem>)ViewBag.Categories, "Select Category", new { @class = "form-control" }) 
+    @Html.DropDownListFor(x => x.CategoryId, (IEnumerable<SelectListItem>)ViewBag.Categories, "Select Category", new { @class = "form-control" })
+    <br />
+    <label>Teacher Name</label>
+    @Html.DropDownListFor(x => x.TeacherId, (IEnumerable<SelectListItem>)ViewBag.Teachers, "Select Teacher", new { @class = "form-control" })
     <br />
 
 

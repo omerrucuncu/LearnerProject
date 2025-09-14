@@ -26,6 +26,7 @@ namespace LearnerProject.Controllers
         [HttpGet]
         public ActionResult AddCourse() // course add page loading has been completed
         {
+            ViewBag.Teachers = new SelectList(context.Teachers.ToList(), "TeacherId", "NameSurname"); // Pass teachers to the view for dropdown 
             ViewBag.Categories = new SelectList(context.Categories.ToList(), "CategoryId", "CategoryName"); // Pass categories to the view for dropdown
 
             return View();
@@ -41,6 +42,7 @@ namespace LearnerProject.Controllers
         [HttpGet]
         public ActionResult UpdateCourse(int id) // course listing operation has been completed
         {
+            ViewBag.Teachers = new SelectList(context.Teachers.ToList(), "TeacherId", "NameSurname"); // Pass teachers to the view for dropdown 
             ViewBag.Categories = new SelectList(context.Categories.ToList(), "CategoryId", "CategoryName"); // Pass categories to the view for dropdown
 
             var course = context.Courses.Find(id);
@@ -58,11 +60,12 @@ namespace LearnerProject.Controllers
             {
                 return HttpNotFound();
             }
-            existingCourse.CourseName = course.CourseName;
-            existingCourse.ImageUrl = course.ImageUrl;
+            existingCourse.CourseName = course.CourseName; // Update course name
+            existingCourse.ImageUrl = course.ImageUrl; // Update image URL
             existingCourse.Description = course.Description;
-            existingCourse.Price = course.Price;
-            existingCourse.Category.CategoryId = course.Category.CategoryId;
+            existingCourse.Price = course.Price; // Update price
+            existingCourse.CategoryId = course.CategoryId;  // Update category 
+            existingCourse.TeacherId = course.TeacherId;  // Updat e teacher 
             context.SaveChanges();
             return RedirectToAction("Index");
         }
