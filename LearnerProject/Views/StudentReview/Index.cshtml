@@ -1,0 +1,49 @@
+﻿@model List<LearnerProject.Models.Entities.Review>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/StudentLayout/Index.cshtml";
+    int count = 0;
+}
+
+<br />
+<h3>Review List</h3>
+<br />
+
+
+<table class="table table-bordered table-hover">
+
+    <tr>
+        <th style="text-align : center ; align-content : center ; font-weight : bold">#</th>
+        <th style="text-align : center ; align-content : center ; font-weight : bold">Course Name</th>
+        <th style="text-align : center ; align-content : center ; font-weight : bold">Course Score</th>
+        <th style="text-align : center ; align-content : center ; font-weight : bold">Comment</th>
+        <th style="text-align : center ; align-content : center ; font-weight : bold">Student Name</th>
+        <th style="text-align : center ; align-content : center ; font-weight : bold">Update</th>
+        <th style="text-align : center ; align-content : center ; font-weight : bold">Active - Inactive</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td style="text-align : center ; align-content : center ; font-weight : bold">@item.Course.CourseName</td>
+            <td style="text-align : center ; align-content : center ; font-weight : bold">@item.ReviewValue</td>
+            <td style="text-align : center ; align-content : center ; font-weight : bold">@item.Comment</td>
+            <td style="text-align : center ; align-content : center ; font-weight : bold">@item.Student.NameSurname</td>
+            <td style="text-align : center ; align-content : center ; font-weight : bold">
+
+                @*<a href="/TeacherCourse/DeleteTeacherCourse/@item.TeacherCourseId" style="text-align : center ; align-content : center ; font-weight : bold" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Delete</a>*@
+                <a href="/StudentReview/UpdateStudentReview/@item.ReviewId" style="text-align : center ; align-content : center ; font-weight : bold" class="btn btn-outline-info"><i class="fa fa-pen"></i>Update</a>
+            </td>
+            <td style="text-align : center ; align-content : center ; font-weight : bold">
+                <a href="/StudentReview/ChangeStatus/@item.ReviewId" style="text-align : center ; align-content : center ; font-weight : bold" class="btn btn-outline-success"><i class="fas fa-check"></i> Change Status</a>
+
+                @*<a href="/TeacherCourse/MakeInactive/@item.CourseId" style="text-align : center ; align-content : center ; font-weight : bold" class="btn btn-outline-warning"><i class="fa fa-lock"></i> Make Inactive</a>*@
+            </td>
+        </tr>
+    }
+
+</table>
+<br />
+<a href="/StudentReview/AddStudentReview" class="btn btn-outline-primary"><i class="fas fa-plus-square"></i> Add New Review</a>
+

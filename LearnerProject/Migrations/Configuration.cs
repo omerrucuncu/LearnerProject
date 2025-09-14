@@ -9,7 +9,7 @@
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false; // Enable automatic migrations 
         }
 
         protected override void Seed(LearnerProject.Models.Context.LearnerContext context)

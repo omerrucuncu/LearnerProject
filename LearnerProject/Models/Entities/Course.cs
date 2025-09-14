@@ -19,5 +19,6 @@ namespace LearnerProject.Models.Entities
         public bool Status { get; set; }
 
 
+
     }
 }

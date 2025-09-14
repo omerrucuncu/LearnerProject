@@ -20,7 +20,7 @@ namespace LearnerProject.Models.Entities
         public string Password { get; set; }
         public bool Status { get; set; }
 
-        public virtual ICollection<Course> Courses { get; set; }
+        public  List<Course> Courses { get; set; }
         public List<CourseVideo> CourseVideos { get; set; }
     }
 }

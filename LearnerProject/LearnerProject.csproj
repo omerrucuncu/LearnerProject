@@ -196,6 +196,10 @@
     <Compile Include="Migrations\202509071424200_mig_teacherid_in_courses_changed.Designer.cs">
       <DependentUpon>202509071424200_mig_teacherid_in_courses_changed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202509141958567_mig_updatedd.cs" />
+    <Compile Include="Migrations\202509141958567_mig_updatedd.Designer.cs">
+      <DependentUpon>202509141958567_mig_updatedd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context\LearnerContext.cs" />
     <Compile Include="Models\Entities\About.cs" />
@@ -574,10 +578,11 @@
     <Content Include="Views\StudentLayout\Index.cshtml" />
     <Content Include="Views\StudentLogin\Index.cshtml" />
     <Content Include="Views\StudentRegister\Index.cshtml" />
+    <Content Include="Views\StudentReview\Index.cshtml" />
+    <Content Include="Views\StudentReview\AddStudentReview.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\StudentReview\" />
     <Folder Include="Views\TeacherCourse\" />
   </ItemGroup>
   <ItemGroup>
@@ -643,6 +648,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202509071424200_mig_teacherid_in_courses_changed.resx">
       <DependentUpon>202509071424200_mig_teacherid_in_courses_changed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202509141958567_mig_updatedd.resx">
+      <DependentUpon>202509141958567_mig_updatedd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

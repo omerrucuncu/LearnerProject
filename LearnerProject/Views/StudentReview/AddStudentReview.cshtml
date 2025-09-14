@@ -1,0 +1,23 @@
+﻿@model LearnerProject.Models.Entities.Review
+@{
+    ViewBag.Title = "AddStudentReview";
+    Layout = "~/Views/StudentLayout/Index.cshtml";
+}
+
+<h3 class="mt-3">Add Review</h3>
+
+<form method="post">
+    <label>Select a course</label>
+    @Html.DropDownListFor(y => y.CourseId, (IEnumerable<SelectListItem>)ViewBag.Courses, "Select a course", new { @class = "form-control mb-3" })
+    <br />
+    <label>Course score</label>
+    @Html.TextBoxFor(x => x.ReviewValue, new { @class = "form-control mb-3", @placeholder = "Review Value" })
+    <br />
+    <label>Comment</label>
+    @Html.TextAreaFor(x => x.Comment, new { @class = "form-control mb-3", @placeholder = "Comment", style = "width: max; height: 200px;" })
+    <br />
+    <button class="btn btn-outline-primary"><i class="fas fa-save"> Save</i></button>
+</form>
+
+
+
