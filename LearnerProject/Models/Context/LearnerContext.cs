@@ -28,7 +28,31 @@ namespace LearnerProject.Models.Context
         public DbSet<About> Abouts { get; set; }
 
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
 
+            // Course - Teacher (bire çok, cascade açık kalabilir)
+            modelBuilder.Entity<Course>()
+                .HasRequired(c => c.Teacher)
+                .WithMany(t => t.Courses)
+                .HasForeignKey(c => c.TeacherId)
+                .WillCascadeOnDelete(true);
+
+            // CourseVideo - Course (bire çok, cascade açık kalabilir)
+            modelBuilder.Entity<CourseVideo>()
+                .HasRequired(cv => cv.Course)
+                .WithMany()
+                .HasForeignKey(cv => cv.CourseId)
+                .WillCascadeOnDelete(true);
+
+            // CourseVideo - Teacher (bire çok ama cascade KAPALI olmalı!)
+            modelBuilder.Entity<CourseVideo>()
+                .HasRequired(cv => cv.Teacher)
+                .WithMany(t => t.CourseVideos)
+                .HasForeignKey(cv => cv.TeacherId)
+                .WillCascadeOnDelete(false);
+        }
 
     }
 }

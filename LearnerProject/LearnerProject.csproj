@@ -200,6 +200,10 @@
     <Compile Include="Migrations\202509141958567_mig_updatedd.Designer.cs">
       <DependentUpon>202509141958567_mig_updatedd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202509142015138_FixCascadeDelete.cs" />
+    <Compile Include="Migrations\202509142015138_FixCascadeDelete.Designer.cs">
+      <DependentUpon>202509142015138_FixCascadeDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context\LearnerContext.cs" />
     <Compile Include="Models\Entities\About.cs" />
@@ -651,6 +655,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202509141958567_mig_updatedd.resx">
       <DependentUpon>202509141958567_mig_updatedd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202509142015138_FixCascadeDelete.resx">
+      <DependentUpon>202509142015138_FixCascadeDelete.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
