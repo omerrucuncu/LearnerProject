@@ -1,0 +1,16 @@
+﻿@model LearnerProject.Models.Entities.CourseRegister
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/StudentLayout/Index.cshtml";
+}
+
+<h3>Course Register</h3>
+
+<form method="post">
+    <label>Course Name</label>
+    @Html.DropDownListFor(x => x.CourseId, (List<SelectListItem>)ViewBag.course, "Select a Course", new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-primary">Register for the course</button>
+</form>
+

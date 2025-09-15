@@ -1,0 +1,26 @@
+﻿@model List<LearnerProject.Models.Entities.Club>
+
+
+<div class="untree_co-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="0">
+                <h2 class="line-bottom text-center mb-4">Most Preferred Classes</h2>
+                <p>Below you can find brief information about our classes in courses that are popular and frequently preferred by our students.</p>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature">
+                        <span class="@item.Icon"></span>
+                        <h3>@item.Name</h3>
+                        <p>@item.Description</p>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div> <!-- /.container -->
+</div> <!-- /.untree_co-section -->

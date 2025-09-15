@@ -1,0 +1,40 @@
+﻿@model List<LearnerProject.Models.Entities.Teacher>
+
+
+<div class="services-section">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-5 mb-5 mb-lg-0">
+
+                <div class="section-title mb-3" data-aos="fade-up" data-aos-delay="0">
+                    <h2 class="line-bottom mb-4">Get to Know Our Expert Trainers</h2>
+                </div>
+
+                <p data-aos="fade-up" data-aos-delay="100">At Learner, our instructors are like stars who set out to make students' dreams come true. Each expert in their field, passionate, and well-versed in the finer points of teaching, our instructors not only impart knowledge to students but also take them on an inspiring journey.</p>
+                <br />
+                @foreach (var item in Model)
+                {
+                    <ul class="ul-check list-unstyled mb-5 primary" data-aos="fade-up" data-aos-delay="200">
+
+                        <li>@item.NameSurname - @item.Title</li>
+
+                    </ul>
+                }
+
+
+                <p data-aos="fade-up" data-aos-delay="300"><a href="/FullTeacher/Index/" class="btn btn-primary">View All Instructors</a></p>
+
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
+                <figure class="img-wrap-2">
+                    <img src="~/Templates/learner-1.0.0/images/teacher-min.jpg" alt="Image" class="img-fluid">
+                    <div class="dotted"></div>
+                </figure>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

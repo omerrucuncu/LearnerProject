@@ -1,0 +1,36 @@
+﻿
+@model List<LearnerProject.Models.Entities.Teacher>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+
+        <div class="col-12 col-sm-6 col-md-6  mb-4 mt-4 mb-lg-0">
+            <div class="custom-media">
+                <img src="@item.ImageUrl" alt="Image" class="img-fluid" style="width:500px; height: 400px;">
+                <div class="custom-media-body">
+                    <div class="d-flex justify-content-between pb-3">
+                        <div class="text-primary"><span class="uil uil-book-open"></span><span>@item.Graduate</span></div>
+                        <div class="review">
+                            <span class="icon-star"></span>
+                            <span>@item.ExperienceYear</span>
+                        </div>
+                    </div>
+                    <div> <h3>@item.Title</h3> <br /> <h5>@item.NameSurname</h5> </div>
+                    <p class="mb-4">
+                        @item.Experience
+                    </p>
+                    @*<p class="mb-4">@item.Experience.Substring(0, Math.Min(90, @item.Experience.Length))@(item.Experience.Length > 90 ? "..." : "")</p>*@
+                    <div class="border-top d-flex justify-content-between pt-3 mt-3 align-items-center">
+                        <div><strong>Skills</strong><p>@item.Skill</p></div>
+                    </div>
+                    <div class="border-top d-flex justify-content-between pt-3 mt-3 align-items-center">
+                        <div><strong>Certificates</strong><p>@item.Certificate</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+</div>
+

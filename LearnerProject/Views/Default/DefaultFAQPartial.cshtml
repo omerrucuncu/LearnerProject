@@ -1,0 +1,46 @@
+﻿@model List<LearnerProject.Models.Entities.FAQ>
+
+
+<div class="untree_co-section">
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mr-auto mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="0">
+                <img src="~/Templates/learner-1.0.0/images/img-school-5-min.jpg" alt="image" class="img-fluid" style="height:500px; width:700px;">
+            </div>
+            <div class="col-lg-6 ml-auto" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="line-bottom mb-4">Frequently Asked Questions</h3>
+                <p>To obtain more detailed information about our institution and our training, you can look at the frequently asked questions below.</p>
+
+                <div class="custom-accordion" id="accordion_1">
+                    @foreach (var item in Model)
+                    {
+                        var uniqueId = "collapse_" + Guid.NewGuid().ToString("N");
+                        <div class="accordion-item">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#@uniqueId" aria-expanded="false" aria-controls="@uniqueId">@item.Question</button>
+                            </h2>
+                            <div id="@uniqueId" class="collapse" aria-labelledby="headingOne" data-parent="#accordion_1">
+                                <div class="accordion-body">
+                                    <div class="d-flex">
+                                        <div class="accordion-img mr-4">
+                                            <img src="@item.ImageUrl" alt="Image" class="img-fluid">
+                                        </div>
+                                        <div>
+                                            <p>@item.Answer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- .accordion-item -->
+                    }
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+

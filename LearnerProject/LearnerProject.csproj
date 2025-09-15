@@ -53,6 +53,12 @@
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -132,13 +138,17 @@
     <Compile Include="Controllers\AdminBannerController.cs" />
     <Compile Include="Controllers\AdminClubController.cs" />
     <Compile Include="Controllers\AdminContactController.cs" />
+    <Compile Include="Controllers\AdminDashboardController.cs" />
     <Compile Include="Controllers\AdminFAQController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\AdminCategoryController.cs" />
     <Compile Include="Controllers\AdminCourseController.cs" />
     <Compile Include="Controllers\AdminLoginController.cs" />
     <Compile Include="Controllers\AdminTeacherController.cs" />
+    <Compile Include="Controllers\CourseRegisterController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\FullCourseController.cs" />
+    <Compile Include="Controllers\FullTeacherController.cs" />
     <Compile Include="Controllers\StudentLayoutController.cs" />
     <Compile Include="Controllers\StudentLoginController.cs" />
     <Compile Include="Controllers\StudentRegisterController.cs" />
@@ -247,6 +257,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -593,6 +604,18 @@
     <Content Include="Views\UILayout\Index.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Default\DefaultCoursePartial.cshtml" />
+    <Content Include="Views\Default\DefaultTestimonialPartial.cshtml" />
+    <Content Include="Views\Default\DefaultCategoryPartial.cshtml" />
+    <Content Include="Views\Default\DefaultClubPartial.cshtml" />
+    <Content Include="Views\Default\DefaultAboutPartial.cshtml" />
+    <Content Include="Views\Default\DefaultTeacherPartial.cshtml" />
+    <Content Include="Views\Default\DefaultFAQPartial.cshtml" />
+    <Content Include="Views\AdminDashboard\Index.cshtml" />
+    <Content Include="Views\CourseRegister\Index.cshtml" />
+    <Content Include="Views\FullCourse\Index.cshtml" />
+    <Content Include="Views\FullCourse\CourseInfo.cshtml" />
+    <Content Include="Views\FullTeacher\Index.cshtml" />
+    <Content Include="Views\FullTeacher\TeacherInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

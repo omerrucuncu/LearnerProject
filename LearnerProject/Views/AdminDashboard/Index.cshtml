@@ -1,0 +1,138 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<br />
+<h3>Statistics</h3>
+<br />
+<div>
+    <div class="container-fluid pt-4 px-4" style="background-color:black; height:850px;">
+        <div class="row g-4">
+
+            <div class="col-sm-6 col-xl-3">
+                <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                    <i class="fa fa-book fa-3x text-primary"></i>
+                    <div class="ms-3">
+                        <p class="mb-2">Number of Courses</p>
+                        <h6 class="mb-0">@ViewBag.v1</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-xl-3">
+                <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                    <i class="fa fa-chart-bar fa-3x text-primary"></i>
+                    <div class="ms-3">
+                        <p class="mb-2">Number of Categories</p>
+                        <h6 class="mb-0">@ViewBag.v2</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+                <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                    <i class="fa fa-chart-area fa-3x text-primary"></i>
+                    <div class="ms-3">
+                        <p class="mb-2">Number of Clubs</p>
+                        <h6 class="mb-0">@ViewBag.v3</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+                <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                    <i class="fa fa-users fa-3x text-primary"></i>
+                    <div class="ms-3">
+                        <p class="mb-2">Number of Registered Students</p>
+                        <h6 class="mb-0">@ViewBag.v4</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br />  <br />
+
+        <div class="row g-4">
+
+            <div class="col-sm-6 col-xl-3">
+                <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                    <i class="fa fa-tag fa-3x text-primary"></i>
+                    <div class="ms-3">
+                        <p class="mb-2">The Most Expensive Course</p>
+                        <h6 class="mb-0">@ViewBag.v5</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-xl-3">
+                <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                    <i class="fa fa-code fa-3x text-primary"></i>
+                    <div class="ms-3">
+                        <p class="mb-2">Number of Courses with Coding Category</p>
+                        <h6 class="mb-0">@ViewBag.v6</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+                <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                    <i class="fa fa-star fa-3x text-primary"></i>
+                    <div class="ms-3">
+                        <p class="mb-2">Popular Courses</p>
+                        <h6 class="mb-0">@ViewBag.v7</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+                <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                    <i class="fa fa-chart-pie fa-3x text-primary"></i>
+                    <div class="ms-3">
+                        <p class="mb-2">Number of Registered Students</p>
+                        <h6 class="mb-0">@ViewBag.v4</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />  <br />
+
+        <div class="row g-4">
+
+            <div class="col-sm-6 col-xl-3">
+                <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                    <i class="fa fa-tag fa-3x text-primary"></i>
+                    <div class="ms-3">
+                        <p class="mb-2">Number of Courses in Music Category</p>
+                        <h6 class="mb-0">@ViewBag.v8</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-xl-3">
+                <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                    <i class="fa fa-code fa-3x text-primary"></i>
+                    <div class="ms-3">
+                        <p class="mb-2">Number of Courses in Sports Category</p>
+                        <h6 class="mb-0">@ViewBag.v9</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+                <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                    <i class="fa fa-star fa-3x text-primary"></i>
+                    <div class="ms-3">
+                        <p class="mb-2">Most Commented Course</p>
+                        <h6 class="mb-0">@ViewBag.v10</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+                <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                    <i class="fa fa-chart-pie fa-3x text-primary"></i>
+                    <div class="ms-3">
+                        <p class="mb-2">Most Enrolled Course</p>
+                        <h6 class="mb-0">@ViewBag.v11</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
