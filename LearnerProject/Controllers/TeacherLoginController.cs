@@ -41,7 +41,7 @@ namespace LearnerProject.Controllers
         {
             FormsAuthentication.SignOut(); // Sign out the user
             Session.Clear(); // Clear the session
-            return RedirectToAction("Index"); // Redirect to the login page
+            return RedirectToAction("Index","Default"); // Redirect to the login page
         }
 
 

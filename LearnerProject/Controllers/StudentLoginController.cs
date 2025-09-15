@@ -34,7 +34,7 @@ namespace LearnerProject.Controllers
         public ActionResult Logout() // student logout operation has been completed
         {
             Session.Clear(); // Clear the session
-            return RedirectToAction("Index"); // Redirect to the login page
+            return RedirectToAction("Index","Default"); // Redirect to the login page
         }
     }
 }
