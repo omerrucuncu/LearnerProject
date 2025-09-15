@@ -18,6 +18,11 @@ namespace LearnerProject.Models.Entities
         public virtual Teacher Teacher { get; set; }
         public bool Status { get; set; }
 
+        public List<Review> Reviews { get; set; }
+        public List<CourseRegister> CourseRegisters { get; set; }
+        public List<CourseVideo> CourseVideos { get; set; }
+
+
 
 
     }

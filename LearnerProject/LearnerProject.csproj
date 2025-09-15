@@ -138,6 +138,7 @@
     <Compile Include="Controllers\AdminCourseController.cs" />
     <Compile Include="Controllers\AdminLoginController.cs" />
     <Compile Include="Controllers\AdminTeacherController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\StudentLayoutController.cs" />
     <Compile Include="Controllers\StudentLoginController.cs" />
     <Compile Include="Controllers\StudentRegisterController.cs" />
@@ -145,6 +146,7 @@
     <Compile Include="Controllers\TeacherCourseController.cs" />
     <Compile Include="Controllers\TeacherLayoutController.cs" />
     <Compile Include="Controllers\TeacherLoginController.cs" />
+    <Compile Include="Controllers\UILayoutController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -203,6 +205,10 @@
     <Compile Include="Migrations\202509142015138_FixCascadeDelete.cs" />
     <Compile Include="Migrations\202509142015138_FixCascadeDelete.Designer.cs">
       <DependentUpon>202509142015138_FixCascadeDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202509150846361_mig_added_course_relations.cs" />
+    <Compile Include="Migrations\202509150846361_mig_added_course_relations.Designer.cs">
+      <DependentUpon>202509150846361_mig_added_course_relations.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context\LearnerContext.cs" />
@@ -584,6 +590,9 @@
     <Content Include="Views\StudentRegister\Index.cshtml" />
     <Content Include="Views\StudentReview\Index.cshtml" />
     <Content Include="Views\StudentReview\AddStudentReview.cshtml" />
+    <Content Include="Views\UILayout\Index.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\DefaultCoursePartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -658,6 +667,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202509142015138_FixCascadeDelete.resx">
       <DependentUpon>202509142015138_FixCascadeDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202509150846361_mig_added_course_relations.resx">
+      <DependentUpon>202509150846361_mig_added_course_relations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
